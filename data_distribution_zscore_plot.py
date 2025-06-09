@@ -6,12 +6,16 @@ from scipy import stats
 # seed yapısı her program çalıştığında farklı random veriseti vermek yerine sabit bir veriseti üretir.
 
 np.random.seed(0)
+
+# Ortalama 30, standart sapma 2 olan normal dağılımlı 15.000 adet veri üretiliyor
 data = np.random.normal(30, 2, 15000)
 
 # manuel zscore
 # data_z = (data - np.mean(data)) / np.std(data)
 
 data_z = stats.zscore(data)
+
+# orijinal veri için grafik oluşturma
 
 # sns.displot(data, kde=True)
 # plt.title("Veri Dağılım Grafiği", fontsize=14, loc="center", c="green")
